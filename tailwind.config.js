@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
+    content: [
         "index.hmtl",
         "./src/**/*.{js,ts,jsx,tsx}"
     ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+    theme: {
+        fontFamily:{
+            'raleway': ["Raleway"]
+        },
+        extend: {},
+    },
+    plugins: [],
 }
 
