@@ -10,7 +10,7 @@ interface IMovieData{
 
 interface IMoviesData{
     data: {
-        results: MovieData[],
+        results: IMovieData[],
         total_pages: number
     },
 }
