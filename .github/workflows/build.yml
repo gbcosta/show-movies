@@ -33,8 +33,10 @@ jobs:
           git remote set-url origin https://github.com/${{ github.repository }}.git
           git fetch origin
           git reset --hard origin/gh-pages
-          rm -rf .
+          rm -rf node_modules
           rm -rf assets
+          rm -rf src
+          rm *
           mv -fv build/* .
           git add .
           git commit -m "Deploy to GitHub Pages"
