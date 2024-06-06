@@ -1,11 +1,11 @@
 # Show Movies
 
-A website created with React, wich is possible to search for movies in the
-TMDB
-
-[Show Movies](https://gbcosta.github.io/show-movies/)
+[Live Demo](https://gbcosta.github.io/show-movies/)
 
 <img src="./public/home.png" width="700px">
+
+Show Movies is a website built with React that allows you to search for movies
+on TMDB (The Movie Database).
 
 ## Technologies
 
