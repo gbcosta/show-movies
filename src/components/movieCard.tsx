@@ -4,7 +4,6 @@ interface PropsMovieCard{
     movieData: IMovieData;
 }
 const MovieCard = ({movieData}: PropsMovieCard)=>{
-    
     return <div className="rounded-md bg-white flex flex-col shadow-md">
         <img
             className="rounded-t-md"

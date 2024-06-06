@@ -40,10 +40,6 @@ const MovieCardsGrid = ()=>{
     }
 
     useEffect(()=>{
-        fetchMovies(3);
-    },[]);
-
-    useEffect(()=>{
         console.log(mode)
         if(mode?.type == "search"){
             resetSearch(`https://api.themoviedb.org/3/search/movie?query=${mode.search}&include_adult=false&language=en-US&page=`);
