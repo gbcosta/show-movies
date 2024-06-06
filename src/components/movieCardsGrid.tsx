@@ -5,6 +5,8 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { ModeContext } from "../utils";
 
 const MovieCardsGrid = ()=>{
+    const pagesToFetch = 4;
+
     const [movies, setMovies] = useState<IMovieData[]>([]);
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
@@ -50,7 +52,7 @@ const MovieCardsGrid = ()=>{
     },[mode])
 
     useEffect(()=>{
-        fetchMovies(3);
+        fetchMovies(pagesToFetch);
     },[url])
 
     return <div>
@@ -59,7 +61,7 @@ const MovieCardsGrid = ()=>{
             next={fetchMovies}
             hasMore={hasMore}
             loader={<h4 className="text-white text-center">Loading...</h4>}
-            scrollThreshold={0.8}
+            scrollThreshold={0.7}
         >
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
                 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4 ">
