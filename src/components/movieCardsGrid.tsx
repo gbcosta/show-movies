@@ -14,7 +14,7 @@ const MovieCardsGrid = ()=>{
     
     const resetSearch = (_url: string)=>{
         if(_url != url){
-            setUrl(url);
+            setUrl(_url);
             setMovies([]);
             setPage(1);
             setHasMore(true);
@@ -44,6 +44,7 @@ const MovieCardsGrid = ()=>{
     },[]);
 
     useEffect(()=>{
+        console.log(mode)
         if(mode?.type == "search"){
             resetSearch(`https://api.themoviedb.org/3/search/movie?query=${mode.search}&include_adult=false&language=en-US&page=`);
         }
